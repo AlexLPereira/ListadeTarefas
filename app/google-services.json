@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "682568912181",
+    "firebase_url": "https://todolist-2f2bc.firebaseio.com",
+    "project_id": "todolist-2f2bc",
+    "storage_bucket": "todolist-2f2bc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:682568912181:android:db2da8e470b13be6cb507c",
+        "android_client_info": {
+          "package_name": "com.example.listadetarefas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "682568912181-51ij2d5djh37jair2aemvlpmb815f3le.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAbGnn5t1v0gxYE_YkXVwqQyjKOOZb8RM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "682568912181-51ij2d5djh37jair2aemvlpmb815f3le.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

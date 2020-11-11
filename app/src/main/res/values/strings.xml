@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Lista de Tarefas</string>
+    <string name="hint_Tarefa">Digite a tarefa</string>
+    <string name="Inserir">Iserir</string>
+    <string name="hint_tarefa">Digite uma Tarefa</string>
+    <string name="botao_inserir">Inserir</string>
+</resources>
