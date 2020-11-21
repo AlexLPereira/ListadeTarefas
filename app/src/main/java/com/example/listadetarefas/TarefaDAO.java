@@ -1,6 +1,9 @@
 package com.example.listadetarefas;
 
+import android.os.Bundle;
 import android.util.Log;
+import android.widget.AutoCompleteTextView;
+import android.widget.Toolbar;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -10,12 +13,15 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.firestore.auth.User;
+import com.google.firebase.firestore.core.View;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class TarefaDAO {
     // Access a Cloud Firestore instance from your Activity
@@ -69,6 +75,8 @@ public class TarefaDAO {
         return tarefas;
     }
 
+
+
     public static void apagarTarefa(final String id){
         db.collection("tarefas").document(id)
                 .delete()
@@ -86,6 +94,21 @@ public class TarefaDAO {
                 });
     }
 
+    public static void alterarTarefa(final String id) {
+        db.collection("tarefas").document(id).update("feita", true)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Log.d(Tarefa.TAG, "Documento alterado: " + id);
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.w(Tarefa.TAG, "Erro ao alterar tarefa.", e);
+                    }
+                });
+    }
 
 
 }

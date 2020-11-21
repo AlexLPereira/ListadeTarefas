@@ -4,4 +4,5 @@
     <string name="Inserir">Iserir</string>
     <string name="hint_tarefa">Digite uma Tarefa</string>
     <string name="botao_inserir">Inserir</string>
+    <string name="atualizar">Atualizar</string>
 </resources>
